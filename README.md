@@ -1,17 +1,17 @@
 # Horno calentador de barrotes
 Este proyecto es la primer parte del proceso productivo de perfiles de aluminio.
 
-*Constitución del horno:*
+__Constitución del horno:__
 
-Mesa de carga de barrotes.
+- Mesa de carga de barrotes.
 
-Horno de barrotes.
+- Horno de barrotes.
 
-Termocuplas.
+- Termocuplas.
 
-Cizalla.
+- Cizalla.
 
-*Procedimiento:* 
+__Procedimiento:__ 
 
 Manualmente, se cargan barrotes en la mesa de carga al horno, una vez habilitado para ingresar en el horno, se abre la puerta del horno y mediante una cadena transportadora avanza el barrote.
 
