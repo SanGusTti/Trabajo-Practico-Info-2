@@ -18,14 +18,19 @@ __Procedimiento:__
 Inicio: Pregunto valores de temperatura (Varían según la aleación utilizar). Corroboro el estado del horno, en caso de estar apagado, deben encenderse los pilotos y cerrarse las puertas una vez que encienden.
 
 __1°Paso:__ *Movimiento de la cadena transportadora:* 
+
                                                 - Sólo si hay tocho en la entrada del horno, la puerta de ingreso se abre. 
-                                                - Sólo si hay tocho en Zona 4, la puerta de egreso se abre. }
+                                                
+                                                - Sólo si hay tocho en Zona 4, la puerta de egreso se abre. 
+                                                
                                                 - Avanza la cadena transportadora.
 
 __2°Paso:__ *Control de temperatura:* 
                         - {
+                        
           *Calentamiento:*
                         - {
+                        
 Manualmente, se cargan barrotes en la mesa de carga al horno, una vez habilitado para ingresar en el horno, se abre la puerta del horno y mediante una cadena transportadora avanza el barrote.
 
 El horno calienta gradualmente el barrote, por zonas. Hasta que no llega a la temperatura correspondiente en cada zona, no avanzará. La lectura de la temperatura se realiza por medio de termocuplas que entran y salen, pinchando el barrote. 
