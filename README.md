@@ -1,5 +1,5 @@
 # Horno calentador de barrotes
-Este proyecto es la primer parte del proceso productivo de perfiles de aluminio.
+Este proyecto es la primer parte del proceso productivo de perfiles de aluminio. El caul consta de un horno calentador de barrotes. Los barrotes ingresan por medio de una mesa de carga al horno. El horno calienta los barrotes a temperaturas seteadas por el maquinista, según características del material. Cada vez que los barrotes alcanzan la temperatura seteada para cada zona, avanzan a la siguiente. En la última zona, se abrira la puerta de salida para enviar el barrote a la prensa extrusora.
 
 __Constitución del horno:__
 
@@ -17,7 +17,7 @@ __Procedimiento:__
 
 Inicio: Pregunto valores de temperatura (Varían según la aleación utilizar). Corroboro el estado del horno, en caso de estar apagado, deben encenderse los pilotos y cerrarse las puertas una vez que encienden.
 
-__1°Paso:__ *Movimiento de la cadena transportadora:* 
+__1°Paso (Avance):__ *Movimiento de la cadena transportadora:* 
 
                                                 - Sólo si hay tocho en la entrada del horno, la puerta de ingreso se abre. 
                                                 
@@ -25,14 +25,15 @@ __1°Paso:__ *Movimiento de la cadena transportadora:*
                                                 
                                                 - Avanza la cadena transportadora.
 
-__2°Paso:__ *Control de temperatura:* 
-                        - {
-                        
-          *Calentamiento:*
-                        - {
-                        
-Manualmente, se cargan barrotes en la mesa de carga al horno, una vez habilitado para ingresar en el horno, se abre la puerta del horno y mediante una cadena transportadora avanza el barrote.
+__2°Paso (Calentamiento):__ *Control de temperatura y calentamiento:*
 
-El horno calienta gradualmente el barrote, por zonas. Hasta que no llega a la temperatura correspondiente en cada zona, no avanzará. La lectura de la temperatura se realiza por medio de termocuplas que entran y salen, pinchando el barrote. 
+                                                - Las termocuplas ingresan al horno por un orificio. Pinchan en el barrote y realizan la medición (Temp[i]). 
+                                                
+                                                - Se encienden o apagan los quemadores segun la temperatura que posean los barrotes hasta llegar a la temperatura correspondiente del primer barrote (Temp[4]>=Temp_Set[4]. 
 
-En la salida del horno, la puerta permanece cerrada hasta que el extremo del barrote no llega a la temperatura deseada. Una vez que alcanza la temperatura correspondiente, se abre la puerta del horno, el barrote avanza la medida correspondiente para el corte del tocho (Un tocho es una porción del barrote, el cual luego se utiliza para la extrusión del perfil). Una vez cortado el barrote, la parte restante retrocede hacia el interior del horno, se cierra la puerta de salida y sigue el proceso de calentado para el futuro corte.
+__Máquina de estados:__
+
+![Máquina de estados Prensa](https://github.com/SanGusTti/Trabajo-Practico-Info-2/assets/129624449/16c2c6b3-143b-4fc6-8f9d-bc01a60f11d9)
+
+
+
