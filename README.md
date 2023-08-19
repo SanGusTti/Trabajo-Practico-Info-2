@@ -23,7 +23,7 @@ __1°Paso (Avance):__ *Movimiento de la cadena transportadora:*
                                                 
                                                 - Sólo si hay tocho en Zona 4, la puerta de egreso se abre. 
                                                 
-                                                - Avanza la cadena transportadora.
+                                                - Avanza la cadena transportadora cuando las condiciones de avance lo permiten (Cond_Avance==1).
 
 __2°Paso (Calentamiento):__ *Control de temperatura y calentamiento:*
 
